@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: api-getway
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+    bus:
+      trace:
+            enabled: true
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: 123456
+    virtual-host: /
+
+
+server:
+  port: 5050
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-1:1111/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

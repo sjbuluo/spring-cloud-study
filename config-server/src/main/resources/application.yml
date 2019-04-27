@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sjbuluo/SpringCloud-Learning/
+          search-paths: new-work/config-repo
+          username: sjbuluo
+          password: sj123456
+server:
+  port: 7070
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-1:1111/eureka/

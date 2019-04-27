@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: feign-consumer
+server:
+  port: 6060
+eureka:
+  client:
+    service-url:
+      defaultZone: http://erueka-service-1:1111/eureka/,http://eureka-service-2:1112/eureka/
+feign:
+  hystrix:
+    enabled: true

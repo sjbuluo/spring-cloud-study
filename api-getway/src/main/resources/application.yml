@@ -1,0 +1,18 @@
+#zuul:
+#  routes:
+#    api-a-url:
+#      path: /api-a-url/**
+#      serviceId: hello-service
+#      customSensitiveHeaders: true # 开启自定义敏感头
+#      sensitiveHeaders: # 将指定路由的敏感头设置为空
+#      addHostHeader: true # 标识最初的服务端请求地址
+#    api-b-url:
+#      path: /api-b-url/**
+#      serviceId: feign-consumer
+#  ignored-patterns: /**/hello/**
+#ribbon:
+#  eureka:
+#    enabled: false
+#hello-service:
+#  ribbon:
+#    listOfServers:

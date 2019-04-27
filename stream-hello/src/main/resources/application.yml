@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        customInput:
+          destination: customTopic
+        customOutput:
+          destination: customTopic

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: consumer
+server:
+  port: 9090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-1:1111/eureka/,http://eureka-service-2:1112/eureka/
+
